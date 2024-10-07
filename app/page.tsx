@@ -5,10 +5,13 @@ export default function Home() {
         <h1 className="mb-6 text-2xl font-bold">Video Upload to Firebase</h1>
         <div className="flex flex-col items-center p-4 border border-gray-300 rounded-lg shadow-md">
           <video
-            src="https://firebasestorage.googleapis.com/v0/b/octtoppusadmin-62082.appspot.com/o/services.mp4?alt=media&token=e0d27844-c1ed-4825-bd2e-5d01ee234028"
+            src={
+              'https://firebasestorage.googleapis.com/v0/b/octtoppusadmin-62082.appspot.com/o/services%20(1).mp4?alt=media&token=72c45b89-8c93-4018-8ea5-cd2459c2028e'
+            }
             controls
             autoPlay
             loop
+            style={{ width: '100%', maxWidth: '600px' }} // Optional styling
           >
             Your browser does not support the video tag.
           </video>
