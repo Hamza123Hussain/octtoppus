@@ -1,0 +1,78 @@
+/* styles.css or any other CSS file */
+
+.loading-overlay {
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%; /* Cover the entire width of the viewport */
+    height: 100%; /* Cover the entire height of the viewport */
+    overflow: hidden; /* Hide scroll bars while loading */
+    background-color: var(--dark-bg); /* Semi-transparent black background */
+    display: grid;
+    place-items: center;
+    transition: all 1s ease;
+    z-index:2000;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+
+    & video {
+      width: 70%;
+      
+    }
+    
+  }
+
+  .loading-overlay img{
+    height: 100%;
+    width: 100%;
+  }
+
+  .loading-overlay.hide{
+    visibility: hidden;
+    opacity: 0;
+  
+
+  }
+  .display-none{
+    display: none;
+  }
+  
+  .loading-content {
+    width: 100px;
+    position: relative;
+  }
+  
+  .spinner {
+
+    animation: spin 3s infinite linear; /* Rotate the spinner indefinitely */
+    width: 100px; /* Adjust the size of the spinner image */
+    height: 100px; /* Adjust the size of the spinner image */
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg); /* Rotate the spinner from 0 degrees */
+    }
+    to {
+      transform: rotate(360deg); /* Rotate the spinner to 360 degrees */
+    }
+  }
+
+
+  @media only screen and (max-width: 468px) {
+    
+.loading-overlay {
+
+  & video {
+    width: 170%;
+    
+  }
+  
+}
+    
+  }
+  

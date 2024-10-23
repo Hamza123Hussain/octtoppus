@@ -1,0 +1,225 @@
+.Hero-container{
+    box-sizing: border-box;
+    height: 70dvh;
+    background-color: var(--dark-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Numbers-section{
+    display: flex;
+    flex-direction: row;
+}
+
+.numbers-section-left{
+    position: relative;
+    z-index: 10;
+    padding: 50px;
+    width: 60%;
+}
+
+.numbers-section-left h3{
+    margin: 0px 0px 50px 0px;
+}
+
+.numbers-section-left p{
+    margin-bottom: 30px;
+    font-size: 1.2em;
+}
+
+.numbers-section-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 20px;
+    width: 40%;
+    background-color: var(--primary-color);
+}
+
+.numbers-section-right img{
+    width: 70%;
+}
+
+.numbers-data-section{
+    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+
+   
+}
+
+
+.numbers-data-section p{
+    margin: 5px 0;
+    font-size: 1.1em;
+    font-weight: 400;
+}
+
+.numbers-data{
+    display: inline-block;
+    transition: transform .4s cubic-bezier(0.85, 0, 0 , 1);
+}
+
+.number-counting{
+    font-size: 300%;
+    font-weight: bold;
+}
+
+.Serv-container{
+    margin: 100px 0px;
+}
+
+.service-card-container{
+    margin: 50px 0px;
+
+    & .slick-list{
+        height: 300px;
+      }
+    
+
+}
+
+.serv-main-heading{
+    font-size: 3em;
+    text-align: center;
+    margin: 100px 0px;
+}
+
+.Serv-paragraph{
+    margin: 30px 100px;
+    
+}
+
+.Serv-paragraph p{
+    text-align: justify;
+}
+
+
+.Small-Card-Container:nth-child(5) {
+  grid-column: span 4; /* Each item spans all three columns */
+}
+
+.serv-sections-container{
+    margin: 10% 20%;
+}
+
+
+.serv-sections-container p{
+
+    text-align: justify;
+
+}
+
+.serv-section{
+    margin: 100px 0px;
+    display: flex;
+}
+
+.serv-text-container{
+    flex: 1 0 60%;
+}
+
+.serv-image-container img{
+    width: 100%;
+}
+
+.serv-image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.serv-image-left{
+    margin-left: 70px;
+}
+.serv-image-right{
+    margin-right: 70px;
+}
+
+/* Card grid section */
+
+.card-grid-container{
+    display: grid;
+    max-width: 2000px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    place-items: center;
+    margin: 0px 50px;
+    row-gap: 50px;
+    column-gap: 20px;
+}
+
+
+
+@media only screen and (max-width: 1024px) {
+    .card-grid-container{
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        margin: 0px 30px;
+        row-gap: 50px;
+        column-gap: 20px;
+    }
+    
+}
+
+
+ /* Responsive styles */
+ @media only screen and (max-width: 768px) {
+
+    .card-grid-container{
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        margin: 0px 20px;
+        row-gap: 50px;
+        column-gap: 10px;
+    }
+    
+    .Serv-paragraph{
+        margin: 30px;
+        
+    }
+
+    .Numbers-section{
+        
+        flex-direction: column;
+    }
+
+    .numbers-section-left{
+        padding: 20px;
+        width: auto;
+    }
+    
+    
+    .Hero-section-left-container{
+        width: 100%;
+        text-align: center;
+    }
+    .Hero-section-left-container p{
+        text-align: center;
+    }
+    .numbers-section-right{
+        width: fit-content;
+    }
+
+    
+  }
+
+  @media only screen and (max-width: 468px) {
+
+    .Hero-container{
+        height:55dvh;
+    }
+
+   .card-grid-container{
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        margin: 0px 10px;
+        row-gap: 40px;
+        column-gap: 10px;
+    }
+
+   
+    
+
+}

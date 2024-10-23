@@ -1,0 +1,274 @@
+.team-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 100px 0;
+}
+
+.team-text-container {
+    text-align: center;
+}
+
+.team-text-container h2 {
+    font-weight: 600;
+    font-size: 4em;
+}
+
+.team-text-container p {
+    font-size: 1.4em;
+    width: 800px;
+}
+
+.team-card-container {
+    cursor: pointer;
+    text-align: center;
+    align-items: center;
+    width: 280px;
+    min-height: 420px;
+    transition: all 0.4s ease;
+}
+
+.team-card-container .team-card-image {
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 50%;
+    padding: 40px 0;
+}
+
+.team-card-container .team-card-name {
+    font-family: 'League Spartan';
+    font-weight: bold;
+    font-size: 1.4em;
+    padding: 10px 0;
+}
+
+.team-card-container .team-card-job-title {
+    font-family: 'Helvetica';
+    color: grey;
+}
+
+.team-card-container:hover {
+    background-color: black;
+    color: var(--primary-color);
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.team-card-container:hover .team-card-job-title {
+    color: white;
+}
+
+.team-grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.team-flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 50px;
+    column-gap: 20px;
+    justify-content: space-evenly;
+    margin: 50px 20px;
+    width: 80%;
+}
+
+.tm-full-container {
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.4s ease;
+    z-index: 2;
+}
+
+.tm-full-container.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.team-modal-container {
+    z-index: 10000;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    visibility: hidden;
+    width: 800px;
+    height: 400px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s ease;
+
+    & p{
+        margin: 0;
+    }
+}
+
+.team-modal-container.visible {
+    visibility: visible;
+    opacity: 1;
+    top: 50%;
+}
+
+.team-modal-content {
+    display: flex;
+    height: 100%;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-left: 30px;
+}
+
+.team-modal-content .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.team-modal-content .close:hover {
+    transform: scale(1.6);
+}
+
+.team-modal-content h3 {
+    margin: 20px 0 0;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.team-modal-content .modal-description {
+    font-size: 0.9em;
+    margin: 15px 0;
+}
+
+
+.team-modal-content .job-title {
+    margin: 0;
+    font-size: 1em;
+}
+
+.team-modal-content .sub-header {
+    color: var(--primary-color);
+    margin: 0;
+    font-size: 0.7em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.team-modal-content .likes, .team-modal-content .dislikes {
+    font-size: 0.7em;
+}
+
+.team-modal-image {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.social-icons-container {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    column-gap: 20px;
+}
+
+.social-icons-container i {
+    color: white;
+    font-size: 1.5em;
+    transition: all 0.3s ease;
+}
+
+.social-icons-container i:hover {
+    color: var(--primary-color);
+}
+
+@media only screen and (max-width: 768px) {
+    .team-card-container {
+        width: 150px;
+        min-height: 260px;
+    }
+
+    .team-card-container .team-card-image {
+        width: 120px;
+        height: 120px;
+        padding: 20px 0;
+    }
+
+    .team-flex-container {
+        width: 100%;
+    }
+
+    .team-modal-container {
+        flex-direction: column;
+        width: 70%;
+        height: 600px;
+    }
+
+    .team-modal-image {
+        margin-top: 0;
+        width: 200px;
+        height: 200px;
+    }
+
+    .team-modal-content {
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .team-modal-content .close {
+        border: 2px solid white;
+        padding: 2px 8px;
+        border-radius: 50%;
+        font-size: 2em;
+        font-weight: bold;
+        top: inherit;
+        right: inherit;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .team-modal-content .close:hover {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    .team-modal-content .close:active {
+        transform: translate(-50%, -50%) scale(0.6);
+    }
+
+    .team-text-container p {
+        width: 100%;
+    }
+
+    .social-icons-container {
+        justify-content: center;
+        font-size: 1.5em;
+    }
+
+    .team-modal-content .modal-description {
+        font-size: 1em;
+    }
+}

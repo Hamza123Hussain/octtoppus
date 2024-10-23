@@ -1,0 +1,52 @@
+.headline-container{
+    margin: 150px 0px 50px 0px;
+    height: 30dvh;
+    box-sizing: border-box;
+}
+
+.about-us-sections-container{
+    background-color: black;
+    padding-bottom: 30px;
+}
+
+.sub-heading-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+
+}
+
+.background-bar{
+    z-index: -1;
+    transform: translateY(7px);
+    opacity: 0.7;
+    position: absolute;
+    height: 15px;
+    width: 350px;
+    box-shadow: -10px 10px 30px var(--box-shadow-dark);
+    background-color: var(--primary-color);
+}
+
+.about-us-sections-container{
+    margin: 100px 0 0 0;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    .background-bar{
+        width: 250px;
+    }
+    
+}
+@media only screen and (max-width: 468px) {
+
+    .background-bar{
+        width: 230px;
+    }
+    
+}

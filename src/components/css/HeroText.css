@@ -1,0 +1,141 @@
+.text-container {
+    font-family: 'League Spartan', 'sans-serif';
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 5dvw;
+  }
+  
+  .word {
+    display: inline-block;
+    
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 8dvw;
+    font-weight: 800;
+    margin: 0.5% 1% 0.5% 1%;
+    transition: transform .5s ease; 
+   
+  }
+  
+  .char {
+
+    display: inline-block;
+    animation: reveal 2s cubic-bezier(0.85, 0.6, 0 ,1) forwards;
+    margin: 2px;
+    transform: translateX(-2440px);
+   
+     
+  }
+
+  .nxt-ln{
+    font-size: 9dvw;
+  } 
+
+  .word:hover{
+    transform: translateY(-10px);
+  }
+
+  .char.uppercase-text{
+    text-transform: uppercase;
+    /* text-shadow: 0px 10px 10px rgba(0, 0, 0, .5); */
+  }
+
+  @keyframes reveal {
+    from {
+      transform: translateX(-2440px);
+      
+    }
+    to {
+      transform: translateX(0);
+     
+    }
+  }
+  
+  .purple-color-text{
+    --bg-size: 400%;
+    
+  background: linear-gradient(
+                90deg,
+                var(--primary-color) 20%,
+                var(--secondary-color) 40%,
+                var(--octtoppus-peach) 60%,
+                var(--primary-color) 80%
+              ) 0 0 / var(--bg-size) 100%;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: move-bg 15s infinite linear;
+}
+
+@keyframes move-bg {
+  to {
+    background-position: var(--bg-size) 0;
+  }
+}
+
+@keyframes textGradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.purple-color-text:hover{
+ -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+
+}
+
+.purple-color-text:hover::before {
+  -webkit-animation: sh02 0.5s 0s linear;
+  -moz-animation: sh02 0.5s 0s linear;
+  animation: sh02 0.5s 0s linear;
+}
+
+.purple-color-text::before {
+  content: '';
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: #fff;
+  box-shadow: 0 0 50px 30px #fff;
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+
+@media only screen and (max-width: 768px) {
+  .word{
+    font-size: 5em;
+  }
+  .purple-color-text{
+    font-size: 1.4em;
+  }
+  
+}
+
+@media only screen and (max-width: 468px) {
+  .word{
+    font-size: 4.5em;
+    padding: 0 2px;
+  }
+  .purple-color-text{
+    font-size: 1.4em;
+  }
+  
+}

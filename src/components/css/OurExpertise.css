@@ -1,0 +1,64 @@
+.ourX-container{
+    & .slick-list{
+        height: 400px;
+      }
+}
+.ourX-header-container{
+    text-align: center;
+    margin: 0 20vw;
+}
+
+.grid-box{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    place-items: center;
+}
+
+
+.med-card-holder{
+    margin: 50px 0px;
+    position: relative;
+    
+}
+
+.slider-med-card{
+
+    display: block;
+}
+
+.card-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    column-gap: 60px;
+    row-gap: 40px; /* This sets the gap between rows */
+}
+
+@media only screen and (max-width: 1024px) {
+    .grid-box{
+        grid-template-columns: repeat(3, 1fr);
+        
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .ourX-header-container{
+        margin: 0 20px;
+    }
+    .grid-box{
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+
+}
+
+
+@media only screen and (max-width: 468px) {
+    .grid-box{
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
+}

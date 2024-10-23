@@ -1,0 +1,19 @@
+.page-not-found{
+    display: block;
+    text-align: center;
+
+    height: 500px;
+    margin: 0 10% 2% 10%;
+}
+
+.page-not-found img{
+    width: 300px;
+
+}
+
+@media only screen and (max-width: 468px)  {
+    .page-not-found{
+        margin: 0px 20px 0px 20px;
+    }
+    
+}

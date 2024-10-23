@@ -1,0 +1,200 @@
+
+
+.ss-container{
+    --steps-gradient: linear-gradient(90deg, rgba(255,245,227,1) 1%, rgba(11,226,231,1) 22%, rgba(140,82,255,1) 43%, rgba(255,180,173,1) 76%, rgba(255,245,227,1) 100%);
+    --default-br: 10px;
+    margin: 50px 2dvw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    row-gap: 50px;
+
+    & .group{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+}
+
+
+.steps-container{
+    max-height: 200px;
+
+    max-width: 230px;
+    margin-left: -20px;
+
+    & .container-one{
+        font-family: 'League Spartan';
+        color: var(--primary-color);
+        font-weight: bold;
+        font-size: 2dvw;
+        background-color: var(--wcu-bg);
+        padding: 20px 8dvw 20px 15px;
+    }
+
+    & .gradient-border{
+        background: var(--steps-gradient);
+        padding: 2px;
+    }
+
+
+    & .gb-two{
+        margin-top: -2px;
+        
+    }
+
+
+    & .container-two{
+        background-color: var(--wcu-bg);
+        color: white;
+        font-family: Helvetica, sans-serif;
+        font-size: calc(3px + 0.6dvw);
+        height: 4dvw;
+        padding: 20px 17px 10px 10px;
+        line-height: 1.4em;
+        
+    }
+}
+
+.steps-container.odd{
+
+
+    & .container-one, .gb-one{
+        border-top-left-radius: var(--default-br);
+    }
+
+    & .gb-two{
+        width: 80%;
+        border-bottom-left-radius: var(--default-br);
+        border-bottom-right-radius: var(--default-br);
+    }
+    & .container-two{
+        
+        border-bottom-left-radius: var(--default-br);
+        border-bottom-right-radius: var(--default-br);
+        
+    }
+    
+}
+.steps-container.even{
+    
+   
+
+    & .container-one, .gb-one{
+        border-top-left-radius: var(--default-br);
+        border-top-right-radius: var(--default-br);
+    }
+
+
+    & .gb-one{
+        width: 80%;
+    }
+
+    & .container-two, .gb-two{
+        
+        border-bottom-left-radius: var(--default-br);
+        border-bottom-right-radius: var(--default-br);
+        border-top-right-radius: var(--default-br);
+    }
+
+    
+}
+
+
+@media only screen and (max-width: 468px) {
+    .ss-container{
+        row-gap: 71px;
+        margin: 100px 0px;
+        flex-wrap: wrap;
+        --default-br: 15px;
+        --mobile-one-width: 130%;
+
+        & .container-one{
+            font-size: 0.8em;
+        }
+
+        & .container-two{
+            font-size: 0.8em;
+            height: 50px;    
+        }
+    }
+
+    .steps-container.odd{
+        text-align: right;
+        transform: translateY(-57px) translateX(130px);
+
+        & .gb-one, .container-one{
+            border-top-right-radius: var(--default-br);
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: var(--default-br);
+            
+        }
+        & .container-one{
+            padding: 20px;
+        }
+
+        & .gb-one {
+            width: var(--mobile-one-width);
+        }
+
+        & .gb-two{
+            width: var(--mobile-one-width);
+            
+            
+        }
+
+        & .container-two{
+            padding-left: 70px;
+        }
+
+        
+    }
+    .steps-container.even{
+        transform: translateX(-170px);
+        
+        z-index: 2;
+
+        & .gb-one{
+            width: 100%;
+           
+        }
+
+        & .gb-one, .container-one{
+            border-top-left-radius: var(--default-br);
+            border-top-right-radius: 0;
+            
+
+        }
+
+        & .container-one{
+            padding: 20px;
+        }
+
+        & .gb-two, .container-two{
+            border-top-right-radius: var(--default-br);
+
+        }
+
+        & .gb-two{
+            width: 120%;
+        }
+
+
+    }
+
+    .steps-container{
+        height: 100px;
+        width: 180px;
+
+        & .container-one{
+            font-size: 2.5em;
+            height: 15px;
+        }
+
+        & .container-two{
+            height: 25px;
+        }
+    }
+    
+}

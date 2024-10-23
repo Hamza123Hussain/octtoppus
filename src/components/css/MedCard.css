@@ -1,0 +1,89 @@
+.med-card-container{
+    position: relative;
+    width: 380px;
+    height: 280px;
+    border: 2px solid grey;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all .4s cubic-bezier(.47,1.64,.41,.8);
+    transition-delay: 50ms 50ms;
+    overflow: hidden;
+
+    & h5{
+        text-transform: uppercase;
+        margin: 0;
+
+    }
+
+    & p{
+        font-size: 0.85em;
+        line-height: 1.6em;
+    }
+
+    & i{
+        font-size: 2.5em;
+        padding-right: 15px;
+        color: var(--primary-color);
+    }
+}
+
+
+.med-card-container.hovering{
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+
+
+    & h5 {
+        color: white;
+    }
+    
+    & p{
+        color: white;
+    }
+
+    & i{
+        color: white;
+    }
+}
+
+
+.med-card-image{
+    position: absolute;
+    top: 50px;
+    right: -50px;
+    width: 200px;
+    opacity: 0;
+    transition: opacity .4s cubic-bezier(.47,1.64,.41,.8),
+}
+
+.med-card-image.hovering{
+    opacity: 1;
+}
+.flexbox{
+    display: flex;
+    align-items: center; /* Aligns items vertically */
+    margin: 20px 0px;
+}
+
+.inline-block{
+    display: inline-block;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .med-card-container{
+        width: 280px;
+        height: 200px;
+    }
+    .med-card-container.hovering{
+        width: 320px;
+    }
+
+    .med-card-image{
+        width: 150px;
+        right: -40px;
+    
+    }
+}

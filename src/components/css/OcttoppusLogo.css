@@ -1,0 +1,101 @@
+.logo-container {
+  font-family: 'League Spartan', sans-serif;
+    display: flex;
+    position: relative;
+    align-items: center;
+    
+    cursor: pointer;
+  }
+  
+  .logo-link  {
+    text-decoration: none;
+  }
+  .logo {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .letter-o {
+    /* letter-spacing: 1px; */
+    font-size: 4em;
+    font-weight: bold;
+    color: var(--primary-color);
+    transition: transform .8s cubic-bezier(0.85, 0, 0 ,1);
+    text-shadow: 1px 0px 1px var(--third-color), -1px 0px 1px var(--secondary-color);
+  }
+
+  .img-letter-o{
+
+    transition: opacity .8s cubic-bezier(0.85, 0, 0 ,1);
+  }
+
+  .img-small{
+    transform: scale(0.35) translateY(-0.3em);
+    transition-delay: 200ms;
+  }
+  .img-none{
+    opacity: 0;
+  }
+  
+  .lowercase {
+    transform: scale(0.35);
+  }
+  
+  .dot {
+    position: relative;
+    left: -7.3em;
+    top: 0.8em;
+    width: 12px;
+    height: 22px;
+    transform: translateX(-1em);
+    transition: transform .8s cubic-bezier(0.85, 0, 0 ,1);
+  }
+  
+.dot.light{
+  background-color: black;
+}
+
+.dot.dark{
+  background-color: white;
+}
+  .full-name {
+    /* letter-spacing: 1px; */
+    font-size: 2em;
+    color:  var(--primary-color);
+    font-weight: bold;
+    opacity: 0;
+    transition: 
+    opacity .8s cubic-bezier(0.85, 0, 0 ,1),
+    transform .8s cubic-bezier(0.85, 0, 0, 1);
+    text-shadow: 1px 0px 1px var(--third-color), -1px 0px 1px var(--secondary-color);
+  }
+  
+  .hovered .letter-o {
+    transform: scale(0.8);
+  }
+  
+  .hovered .dot {
+    transform: translateX(4.2em) scale(0.6) translateY(-0.6em);
+  
+  }
+  
+  .hovered .full-name {
+    transform: translateX(-1.5em);
+    opacity: 1;
+  }
+
+  @media only screen and (max-width: 468px){
+    .hovered .letter-o{
+      font-size: 5em;
+    }
+    .hovered .full-name{
+      
+      font-size: 2.5em;
+    }
+    .hovered .dot{
+      transform: translateX(3.5em) translateY(-0.2em) scale(0.5);
+    }
+    
+  }

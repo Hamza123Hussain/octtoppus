@@ -1,0 +1,342 @@
+
+.formbold-main-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 40px 50px 40px;
+    font-family: Helvetica, sans-serif;
+
+  }
+
+  .step-sm{
+  display: none;
+  }
+
+  .step-md{
+    display: flex;
+    
+  }
+
+  .formbold-form-wrapper {
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+  }
+
+  .formbold-steps {
+    padding: 20px 0;
+    margin-bottom: 35px;
+    border-bottom: 1px solid #DDE3EC;
+  }
+  .formbold-steps ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    gap: 40px;
+  }
+  .formbold-steps li {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #536387;
+  }
+  .formbold-steps li span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #DDE3EC;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #536387;
+  }
+  .formbold-steps li.active {
+    color: #07074D;;
+  }
+  .formbold-steps li.active span {
+    background: var(--primary-color);
+    color: #FFFFFF;
+  }
+
+  .formbold-input-flex {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 22px;
+  }
+  .formbold-input-flex > div {
+    width: 50%;
+  }
+
+  .input-error{
+    border-color: red !important;
+  }
+
+  .formbold-form-input, .PhoneInputInput, .selected-option {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 13px 22px;
+    border-radius: 5px;
+    border: 1px solid #DDE3EC;
+    background: #FFFFFF;
+    font-weight: 500;
+    font-size: 16px;
+    color: #536387;
+    outline: none;
+    resize: none;
+  }
+  .formbold-form-input:focus, .PhoneInputInput:focus, .selected-option:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+  }
+  .formbold-form-label {
+    color: #07074D;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .formbold-form-confirm {
+    border-bottom: 1px solid #DDE3EC;
+    padding-bottom: 35px;
+  }
+  .formbold-form-confirm p {
+    font-size: 16px;
+    line-height: 24px;
+    color: #536387;
+    margin-bottom: 22px;
+    width: 75%;
+  }
+  .formbold-form-confirm > div {
+    display: flex;
+    gap: 15px;
+  }
+
+  .formbold-confirm-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #FFFFFF;
+    border: 0.5px solid #DDE3EC;
+    border-radius: 5px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #536387;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: all .3s ease-in-out;
+  }
+  .formbold-confirm-btn {
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.12);
+  }
+  .formbold-confirm-btn.active {
+    background: var(--primary-color);
+    color: #FFFFFF;
+  }
+
+  .formbold-form-step-1,
+  .formbold-form-step-2,
+  .formbold-form-step-3 {
+    display: block;
+  }
+
+
+  .formbold-form-btn-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 25px;
+    margin-top: 25px;
+  }
+  .formbold-back-btn {
+    cursor: pointer;
+    background: #FFFFFF;
+    border: none;
+    color: #07074D;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    display: block;
+  }
+  .formbold-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 10px 25px;
+    border: none;
+    font-weight: 500;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+  }
+  .formbold-btn:hover {
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .selection-div{
+    position: relative;
+  }
+.selected-option{
+  cursor: pointer;
+ 
+}
+
+.arrow {
+    
+  position: absolute;
+  top: 50%;
+  width: initial;
+  left: 90%;
+  color: #536387;
+  transform: translateY(-50%);
+  }
+  
+  .arrow.open {
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  .dropdown-options {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background: white;
+    border-color: var(--primary-color);
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    overflow-y: auto;
+    border-radius: 10px;
+    z-index: 10;
+    transition: opacity .5s ease;
+  }
+  
+  .dropdown-options.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .option {
+    padding: 15px;
+    cursor: pointer;
+    color: #536387;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  
+  .option:hover {
+    background-color: rgba(0, 0, 0, .1);
+  }
+
+  input[type="checkbox"]{
+    box-shadow: none !important;
+   
+  }
+  textarea{
+    font-family: Helvetica, sans-serif;
+}
+  input[type="checkbox"]:checked{
+    
+    accent-color: var(--primary-color) !important;
+  }
+
+  .input-services {
+    width: 20px;
+    height: 20px; 
+    transition: transform .2s ease;
+    margin-right: 10px;
+
+  }
+
+  .form-checkbox{
+    
+    text-align: left;
+ }
+ 
+ .checkbox-box label{
+     cursor: pointer;
+     display: flex;
+     align-items: center;
+     margin: 10px 0px;
+ }
+ 
+ .thin-line-bt{
+  width: 40px;
+  height: 1px;
+  background-color: #536387;
+
+ }
+ 
+ .check-grid label{
+     width: 100%;
+     font-weight: 300;
+     font-size: 16px;
+     color: #536387;
+ }
+
+ .btn-ring{
+  display: none;
+}
+
+.btn-ring.show{
+  display: block;
+}
+.btn-ring:after {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: ring 1.2s linear infinite;
+}
+@keyframes ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+  
+
+  @media only screen and (max-width: 768px) {
+
+    .formbold-main-wrapper {
+    padding: 40px 20px;
+    }
+
+    .formbold-steps ul {
+      justify-content: center;
+    }
+
+    .step-md{
+      display: none !important;
+    }
+    .step-sm{
+      display: flex;
+      gap: 10px !important;
+    }
+
+    .formbold-input-flex > div {
+      width: 100%;
+    }
+
+    .formbold-input-flex{
+      flex-wrap: wrap;
+    }
+    
+  }

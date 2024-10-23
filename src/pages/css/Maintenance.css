@@ -1,0 +1,16 @@
+.maintenance-page{
+
+    margin: 100px 0px;
+    
+
+    & .maintenance-container{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        width: auto;
+        flex-wrap: wrap;
+        align-items: center;
+        flex-direction: column;
+    }
+}

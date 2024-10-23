@@ -1,0 +1,11 @@
+.cursor-tracker {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .tracking-text {
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+  

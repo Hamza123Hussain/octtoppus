@@ -1,0 +1,191 @@
+
+
+.MenuItem{
+  font-family: Helvetica, sans-serif;
+    padding: 10px 0px;
+    position:relative;
+    margin: 20px;
+    font-size: 1.1em;
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    transition: all .4s ease;
+
+}
+
+.MobileMenuItem{
+  font-family: Helvetica, sans-serif;
+  display: flex;
+  position: relative;
+  font-size: 2em;
+  font-weight: 400;
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid var(--dark-bg);
+  width: 768px;
+  padding: 20px 5px 20px 15px;
+  cursor: pointer;
+ 
+
+}
+
+
+
+.MenuItem:hover{
+    text-shadow: -1px 0px 50px var(--primary-color);
+    
+}
+
+.dropdown {
+  position: absolute;
+  top: -10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.13);
+  background-color: var(--primary-color);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.85, 0, 0, 1);
+  overflow: hidden;
+  z-index: 11;
+  border-radius: 10px;
+  cursor: pointer;
+  transform: translateX(-8px);
+  padding: 50px 10px 15px 10px;
+  
+}
+
+.dropdown.active{
+  display: block;
+  opacity: 1;
+  transform: translateX(-8px);
+
+}
+
+
+.MenuItem.has-dropdown{
+  z-index: 14;
+}
+
+
+.dropdown-item{
+  color: white;
+  font-size: 1em;
+display: flex;
+flex-direction: column;
+position: relative;
+padding: 5px;
+text-decoration: none;
+transition: all .4s ease;
+font-weight: 500;
+
+}
+
+
+
+.MenuItem::after, .dropdown-item::after{
+content: '';
+  position: absolute;
+  top: 35px;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px; /* Adjust the thickness of the underline */
+  background-color: white; /* Set your desired underline color */
+  transition:
+  text-shadow 0.4s ease,
+  width 550ms cubic-bezier(0.85, 0, 0 ,1); /* Adjust the transition duration and timing function */
+  text-shadow: none;
+}
+
+.MenuItem:hover::after, .dropdown-item:hover::after{
+    
+    width: 100%;
+
+}
+
+
+
+
+.MobileDropdown{
+  display: none;
+  position: relative;
+  font-size: 1em;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid var(--dark-bg);
+  width: 768px;
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity .4s ease;
+  }
+
+  .MobileDropdown.active{
+    display: block;
+    opacity: 1;
+  }
+
+
+
+
+
+.mobiledropdown-item{
+  display: flex;
+  position: relative;
+  font-size: 1.4em;
+  font-weight: 500;
+  color: white;
+  background-color: var(--primary-color);
+  text-decoration: none;
+  width: 768px;
+  padding: 20px 0px 20px 30px;
+  cursor: pointer;
+  transition: all .4s ease;
+  
+}
+
+.mobiledropdown-item:active{
+  font-size: 1.2em;
+}
+
+
+  .arrow {
+    color: white;
+    position: relative;
+    top: 1px;
+    left: 5px;
+    font-size: 15px;
+    transition: transform .5s ease;
+    
+  }
+  
+  .arrow.active, .m-arrow.active {
+    transform: rotate(180deg);
+  }
+
+  .MobileMenuItem.has-dropdown{
+    display: flex;
+    align-items: center;
+  }
+
+ .m-arrow{
+    color: white;
+    position: relative;
+    left: 10px;
+    font-size: 15px;
+    width: fit-content;
+    height: fit-content;
+    transition: transform .5s ease;
+
+ }
+
+.menu-list {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+
+@media only screen and (min-width: 768px){
+  
+
+}

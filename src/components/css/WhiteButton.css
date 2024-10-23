@@ -1,0 +1,15 @@
+.white-button{
+    padding: 12px 25px;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-weight:  bold;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.white-button.hovering{
+    background: transparent;
+    color: white;
+}

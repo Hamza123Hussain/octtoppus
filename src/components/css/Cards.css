@@ -1,0 +1,325 @@
+.Card-box{
+
+    --card-width: 310px;
+    --card-height: 470px;
+
+    text-align: left;
+    color: black;
+    height: var(--card-height);
+    width:  var(--card-width);
+    position: relative;
+    background: radial-gradient(circle at  -10% -15%, var(--secondary-color) 10%, var(--primary-color) 10%, var(--octtoppus-peach) 80%);
+    /* box-shadow: 0px 0px 30px var(--primary-color); */
+    border-radius: 5px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+.Card-title{
+  
+    line-height: 1.2em;
+    font-weight: bold;
+    font-size: 1.6em;
+    margin: 10px 0px;
+    color: black;
+    letter-spacing: -0.02em;
+    transition: transform .5s ease;
+    -webkit-transition: transform .5s ease;
+    -ms-transition: transform .5s ease;
+    
+   
+}
+
+.Card-title.clicked{
+    transform: translateY(-200px);
+}
+
+.Card-info{
+    text-overflow: ellipsis; /* Add ellipsis (...) when text overflows */
+    -webkit-line-clamp: 8; /* Limit the number of lines to display */
+    -webkit-box-orient: vertical; /* Ensure text is truncated vertically */
+    display: -webkit-box; /* Display as a block container with ellipsis */
+    overflow: hidden;
+    /* padding-right: 20px; */
+    font-weight: 450;
+    word-spacing: 0;
+    font-size: 1em;
+    line-height: 1.5em;
+    text-align: left;
+
+    transition: transform .3s ease-in-out, opacity .2s ease-in-out;
+    -webkit-transition: transform .3s ease-in-out, opacity .2s ease-in-out;
+    -ms-transition: transform .3s ease-in-out, opacity .2s ease-in-out;
+    color: rgba(0, 0, 0, 0.8);
+
+}
+
+.Card-info.clicked{
+    transform: translateY(-60px)  !important;
+    text-overflow: unset;
+    -webkit-line-clamp: unset;
+
+}
+
+.backarea{
+    height: 100%;
+    width: auto;
+}
+
+.card-data{
+    position: relative;
+    height: 100%;
+    padding: 35px 25px;
+}
+
+
+.Card-logo-container{
+    display: flex;
+    margin: 10px 0px;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    column-gap: 30px;
+}
+
+ .Card-logo-container.clicked{
+    display: none !important;
+} 
+
+.logo-item{
+    object-fit: contain;
+    margin: auto;
+
+}
+
+.logo-name{
+    font-size: 0.7em;
+    margin: 0;
+    text-align: center;
+}
+
+.logo-section{
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.Card-link{
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 500;
+    position: absolute;
+    text-decoration: none;
+    color: black;
+    font-size: 1.1em;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+
+}
+
+ .Card-link.clicked{
+    opacity: 0 !important;
+   
+} 
+
+
+.Card-link::after{
+    content: '';
+  position: absolute;
+  top: 20px;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px; /* Adjust the thickness of the underline */
+  background-color: black; /* Set your desired underline color */
+
+  transition:
+  text-shadow 0.3s ease,
+  width 550ms cubic-bezier(0.85, 0, 0 ,1); /* Adjust the transition duration and timing function */
+  -webkit-transition:
+  text-shadow 0.3s ease,
+  width 550ms cubic-bezier(0.85, 0, 0 ,1); /* Adjust the transition duration and timing function */
+  -ms-transition:
+  text-shadow 0.3s ease,
+  width 550ms cubic-bezier(0.85, 0, 0 ,1); /* Adjust the transition duration and timing function */
+  text-shadow: none;
+  
+}
+
+
+.Card-link:hover::after{
+    width: 77.5%;
+}
+
+.chevron-r{
+    justify-content: center;
+    font-size: 0.6em;
+    transform: translateX(2px);
+    
+}
+
+.chevron-r.hovered{
+    transform: translateX(7px)  scale(1.2);
+}
+
+.svg-container{
+    position: absolute;
+    top: 35%;
+    transition: opacity .3s ease;
+    transition-delay: .2s;
+    width: 300px;
+    height: 320px;
+}
+
+.svg-container img{
+    width: 300px;
+    height: 320px;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 1024px){
+
+    .Card-category{
+        font-size: 0.8em;
+    }
+
+    .Card-title{
+        font-size: 1.5em;
+    }
+
+    .Card-info{
+        font-size: 0.9em;
+        
+        
+    }
+    
+    .Card-link{
+        font-size: 1em;
+    }
+
+    .card-data{
+        padding: 40px 25px;
+    }
+
+    .Card-logo-container{
+        margin: 20px 0px;
+        row-gap: 20px;
+    
+    }
+
+    .logo-item{
+        width: 25px;
+        margin-right: 20px;
+    }
+}
+@media only screen and (max-width: 768px){
+
+    .Card-box{
+        height: 400px;
+        width:  250px;
+    }
+
+    .Card-category{
+        font-size: 0.7em;
+    }
+
+    .Card-title{
+        font-size: 1.2em;
+        margin: 12px 0px;
+    }
+
+    .Card-info{
+        font-size: 0.7em;
+        
+    }
+    
+    .Card-link{
+        font-size: 1em;
+    }
+
+    .svg-container img{
+        width: 250px;
+        height: 260px;
+    }
+    .card-data{
+        padding: 30px 20px;
+    }
+
+    .Card-logo-container{
+        margin: 15px 0px;
+        row-gap: 15px;
+    
+    }
+
+    .logo-item{
+        width: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media only screen and (max-width: 468px){
+
+    .Card-box{
+        height: 400px;
+        width:  250px;
+    }
+
+    .Card-category{
+        font-size: 1em;
+    }
+
+    .Card-title{
+        font-size: 1.8em;
+        margin: 18px 0px;
+    }
+
+    .Card-info{
+        font-size: 1.1em;
+        
+    }
+    
+    .Card-link{
+        font-size: 1.4em;
+    }
+
+    .svg-container img{
+        width: 250px;
+        height: 260px;
+    }
+    .card-data{
+        padding: 15px 20px;
+    }
+
+    .Card-logo-container{
+        margin: 10px 0px;
+        row-gap: 10px;
+        column-gap: 10px;
+    
+    }
+
+    .logo-item{
+        width: 25px;
+
+    }
+
+    .Card-info.clicked{
+        transform: translateY(-40px) !important;
+        text-overflow: unset;
+        -webkit-line-clamp: unset;
+    
+    }
+}

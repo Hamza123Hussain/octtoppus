@@ -1,0 +1,4 @@
+.purple-color-text{
+    color: radial-gradient(circle at  -10% -15%, var(--secondary-color) 5%, var(--primary-color) 20%, var(--octtoppus-peach) 70%);
+   
+}

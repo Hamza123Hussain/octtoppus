@@ -1,0 +1,19 @@
+.call-to-action{
+    
+    margin: 200px 0px 200px 0px;
+    padding: 0px 50px 0px 50px;
+}
+
+.above-container{
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 768px){
+    .above-container{
+        margin: 50px 0px 50px 0px;
+        padding: 0px 10px 0px 10px;
+    }
+    
+  
+}

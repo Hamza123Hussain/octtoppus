@@ -1,0 +1,249 @@
+.vertical-tabs-container {
+    display: flex;
+    margin: 50px;
+    border-radius: 50px;
+    background: radial-gradient(circle at  -80% -15%, var(--primary-color) 50%, var(--octtoppus-peach) 80%);
+    height: 500px;
+    align-items: center;
+    
+  }
+
+.vertical-tabs-container.mobile-view{
+    flex-direction: column;
+    border-radius: 0;
+    background: none;
+    justify-content: space-around;
+    height: 45dvh;
+}
+  
+  .tabs {
+    color: black; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 50%;
+   
+  }
+
+  .tabs.hidden{
+    display: none;
+  }
+  
+  .tab {
+    font-family: 'League Spartan';
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .3s ease;
+    font-size: 1.5em;
+    padding: 20px 30px;
+    margin-left: 20px;
+    
+}
+  
+  .tab:hover {
+   
+    background-color: rgba(255, 255, 255, .3);
+  }
+  
+  .tab.active {
+    transform-origin: center center;
+    --bg-size: 400%;
+    
+    background: linear-gradient(
+                  90deg,
+                  var(--secondary-color) 20%,
+                  var(--octtoppus-peach) 60%,
+                  var(--secondary-color) 80%
+                ) 0 0 / var(--bg-size) 100%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: move-bg 20s infinite linear;
+
+  }
+
+  @keyframes move-bg {
+  to {
+    background-position: var(--bg-size) 0;
+  }
+}
+
+  
+  .content {
+    width:  100%;
+    height: 450px;
+    background: white;
+    border-radius: 50px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .tab-image-container{
+    position: relative;
+    & img{
+      opacity: 0;
+      width: 125%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  
+      transition: all .4s ease;
+    }
+
+    & .image-description{
+        position: absolute;
+        margin: 10px;
+        padding: 10px 20px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 5px;
+        transform: translateY(20px);
+        opacity: 0;
+        transition: all .4s ease;
+        font-size: 1.1em;
+
+    }
+
+    & .main-content{
+      transition: all .4s ease;
+    }
+    
+    
+  }
+
+  .zoom-out{
+    width: 95% !important;
+  }
+
+  .tab-image-container:hover{
+
+    & img{
+      opacity: 1;
+    }
+
+    & .image-description{
+      opacity: 1;
+
+  }
+
+    & .main-content{
+      opacity: 0;
+
+    }
+    
+  }
+
+  
+  .tab-content {
+    display: none;
+    transition: height 0.5s ease;
+    margin: 5% 10%;
+  }
+  
+  .tab-content.active {
+    display: block;
+    animation: slideInFromBottom 0.5s ease;
+    
+  }
+
+  .inline-heading-arrow{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  
+  }
+
+  .mobile-tab-titles{
+    padding-bottom: 20px;
+    font-family: 'League Spartan';
+    text-align: center;
+    font-weight: bold;
+    width: 70dvw;
+    margin: 0;
+  }
+
+  .mobile-title{
+    display: none;
+    
+  }
+
+  .mobile-title.active{
+    display: block;
+    
+  }
+
+  .mobile-tab-nav{
+    display: flex;
+    margin: 50px 50px 0px 50px;
+    justify-content: space-around;
+  }
+
+  .toggle-prev, .toggle-next{
+    cursor: pointer;
+    padding: 0px 15px 10px 15px;
+    border-radius: 50%;
+    font-size: 2em;
+  }
+
+  .toggle-prev:hover, .toggle-next:hover{
+   
+
+    background-color: rgba(255, 255, 255, 0.404) ;
+
+  }
+
+  .tab-numbering{
+    text-align: center;
+    font-size: 2em;
+  }
+
+  @media only screen and (max-width: 768px) {
+
+    .vertical-tabs-container{
+      border-radius: 0;
+        margin: 20px;
+    }
+    .content{
+        text-align: left;
+        margin: 0;
+        border-radius: 0;
+        height: 30dvh;
+    }
+    .tab-content.active {
+      margin: 0;
+      
+    }
+
+
+    .tab-image-container{
+  
+      & .image-description{
+          transform: translateY(-40px);
+          opacity: 0;
+          transition: all .4s ease;
+  
+      }
+  
+      & .main-content{
+        transition: all .4s ease;
+      }
+      
+      
+    }
+}
+  
+  @keyframes slideInFromBottom {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  

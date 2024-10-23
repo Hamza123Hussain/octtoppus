@@ -1,0 +1,187 @@
+
+.adv-main-container{
+    position: relative;
+}
+
+.adv-container{
+    background-color: var(--dark-bg);
+    height: 700px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+
+.adv-sub-container{
+    /* background-color: rgba(0,0,0,0.3); */
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 50px;
+    height: 600px;
+    transition: background-color .8s ease;
+}
+
+.adv-heading{
+    color: white;
+    transition: transform .8s ease;
+    transform-origin: 0px 200px;
+    font-size: 6em;
+    text-transform: uppercase;
+    transform: translateY(200px);
+    margin: 0;
+    z-index: 3;
+}
+
+.adv-paragraph{
+    opacity: 0;
+    transform: translateY(100%);
+    margin-bottom: 50px;
+    transition: 
+    opacity .8s ease,
+    transform .8s ease;
+    color: white;
+    margin-right: 40vw;
+    height: 100px;
+    z-index: 3;
+}
+
+.gradient {
+    position: absolute;
+    /* Set the background to a linear gradient */
+    background: linear-gradient( transparent 20%, black 40%, transparent 60%);
+    height: 800px;
+    z-index: 2;
+    
+    width: 100%;
+    /* For smoother rendering in modern browsers */
+    /* You can adjust the angle and color stops as needed */
+  }
+
+
+  .gradient.g-down{
+    bottom: -580px;
+  }
+
+  .gradient.g-up{
+    bottom: -480px;
+  }
+
+.adv-container.visible{
+
+    & .adv-sub-container{
+        
+        background-color: rgba(0,0,0,0.7);
+    }
+
+    & .adv-heading{
+        transform: translateY(-50px) scale(.6);
+
+    }
+
+    & .adv-paragraph{
+        position: inherit;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+    .adv-container{
+        height: 500px;
+        margin-bottom: 50px;
+    }
+    .adv-sub-container{
+        padding: 0px 0px 0px 30px;
+        justify-content: center;
+    }
+
+    .adv-heading{
+        font-size: 4em;
+        transform: translateY(180px);
+    }
+
+    .adv-paragraph{
+        margin-right: 120px;
+    }
+
+
+    .adv-container.visible{
+
+        & .adv-sub-container{
+           
+            background-color: rgba(0,0,0,0.7);
+        }
+    
+        & .adv-heading{
+            transform: translateY(-50px) scale(.8);
+    
+        }
+    
+        & .adv-paragraph{
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        
+    }
+    
+    .gradient{
+        height: 100px;
+    }
+
+    .gradient.g-down{
+        bottom: -110px;
+      }
+    
+      .gradient.g-up{
+        bottom: -60px;
+      }
+    
+}
+
+@media only screen and (max-width: 468px) {
+
+    .adv-container{
+        height: 500px;
+    }
+    .adv-sub-container{
+        padding: 0px 0px 0px 30px;
+        justify-content: center;
+    }
+
+    .adv-heading{
+        font-size: 4em;
+        transform: translateY(180px);
+    }
+
+    .adv-paragraph{
+        margin-right: 30px;
+    }
+
+
+    .adv-container.visible{
+
+        & .adv-sub-container{
+           
+            background-color: rgba(0,0,0,0.7);
+        }
+    
+        & .adv-heading{
+            transform: translateY(-50px) scale(.8);
+    
+        }
+    
+        & .adv-paragraph{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+
+    
+}

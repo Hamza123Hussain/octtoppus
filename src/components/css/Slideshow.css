@@ -1,0 +1,35 @@
+.each-slide-effect{
+  transition-timing-function: linear;
+}
+
+.each-slide-effect > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+  height: 600px;
+  
+}
+
+.each-slide-effect span {
+  padding: 20px;
+  font-size: 20px;
+  background: transparent;
+  color: white;
+  text-align: center;
+}
+
+.indicator {
+  cursor: pointer;
+  padding: 10px;
+  text-align: center;
+  border: 1px rgba(255, 255, 255, 0.5) solid;
+  margin: 0;
+}
+
+.indicator.active {
+  color: #fff;
+  background: #666;
+}

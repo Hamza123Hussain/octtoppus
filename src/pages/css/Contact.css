@@ -1,0 +1,155 @@
+.contact-hero-container{
+    box-sizing: border-box;
+    height: 70vh;
+    display: flex;
+    padding: 50px;  
+    justify-content: flex-start;
+    align-items: center;
+    color:white;
+    background-attachment: fixed;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero-content{
+    margin-top: 20px;
+    & h1{
+        margin: 0;
+    }
+
+    & p{
+        margin-bottom: 40px;
+    }
+}
+
+.contact-details-container{
+    height: 700px;
+    display: flex;
+    flex-direction: row;
+
+    & .flex-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 100%;
+    }
+
+    & .contact-area-container div{
+        margin: 30px 0px;
+        
+    }
+
+    & .fa-solid{
+        padding-right: 20px;
+    }
+
+    & .fa-brands{
+        padding-right: 10px;
+    }
+
+}
+
+.address-list{
+    margin: 60px 0px;
+}
+
+.address-list h5, .address-list p{
+    margin: 0;
+}
+
+.address-list h5{
+    margin-bottom: 10px;
+}
+
+
+.contact-details-container a, .contact-details-container i {
+    text-decoration: none;
+    color: black;
+    font-size: 1.4em;
+    transition: all .2s ease;
+    
+}
+
+.social-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 !important;
+}
+
+.social-container a, .c-ast {
+    padding-right: 20px;
+
+}
+
+.c-ast{
+    font-size: 1em !important;
+}
+
+.contact-details-container a:hover {
+    color: var(--primary-color);
+
+    & i{
+        color: var(--primary-color);
+    }
+    
+}
+
+.h-underline:hover{
+    text-decoration: underline;
+}
+.padding-md{
+    padding: 50px;
+}
+
+.right-border{
+    border-right: 1px solid black;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    
+    .contact-hero-container{
+        height: 50vh;
+    }
+
+    .contact-details-container{
+        height: auto;
+        flex-direction: column;
+        & .flex-box{
+            width: inherit;
+        }
+    }
+
+    .right-border{
+        border-bottom: 1px solid black;
+    }
+
+    /* .social-text{
+        font-size: 0.9em;
+    } */
+
+    .contact-details-container {
+        & .contact-area-container div {
+            margin: 30px 0px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            
+        }
+        & .h-underline {
+            width: 200px;
+        }
+
+        & .c-ast{
+            display: none;
+        }
+    }
+
+    
+    
+}
