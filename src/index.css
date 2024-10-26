@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'League Spartan';
   src: url('../public/fonts/League Spartan Regular.woff2') format('woff2'),
-       url('../public/fonts/League Spartan Regular.woff') format('woff');
+    url('../public/fonts/League Spartan Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }
@@ -9,7 +9,7 @@
 @font-face {
   font-family: 'League Spartan';
   src: url('../public/fonts/LeagueSpartan-Bold.woff2') format('woff2'),
-       url('../public/fonts/LeagueSpartan-Bold.woff') format('woff');
+    url('../public/fonts/LeagueSpartan-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
 }
@@ -20,38 +20,36 @@
   font-style: normal;
 }
 
-
-
 :root {
-  --primary-color: #8C52FF; /* Set your desired color value here */
+  --primary-color: #8c52ff; /* Set your desired color value here */
   --primary-color-opaque: #8c52ff25;
-  --primary-light:#ba9efc;
-  --secondary-color: #03FDFF;
-  --third-color: #FF00FF;
-  --octtoppus-peach: #FFB4AD;
+  --primary-light: #ba9efc;
+  --secondary-color: #03fdff;
+  --third-color: #ff00ff;
+  --octtoppus-peach: #ffb4ad;
   --light-bg: white;
   --dark-bg: #000;
-  --box-shadow-dark: rgba(0,0,0,0.4);
-  --box-shadow-light:  rgba(255, 255, 255, .4);
-  --default-gradient:  radial-gradient(circle at  -10% -15%, var(--secondary-color) 1%, var(--primary-color) 20%, var(--octtoppus-peach) 80%);
-  --secondary-dark-bg: #0A0016;
+  --box-shadow-dark: rgba(0, 0, 0, 0.4);
+  --box-shadow-light: rgba(255, 255, 255, 0.4);
+  --default-gradient: radial-gradient(
+    circle at -10% -15%,
+    var(--secondary-color) 1%,
+    var(--primary-color) 20%,
+    var(--octtoppus-peach) 80%
+  );
+  --secondary-dark-bg: #0a0016;
   --third-dark-bg: radial-gradient(#111839, #222d6d);
   --opaque-dark: rgb(241, 241, 241);
- 
-
- 
-
 }
 ::selection {
-    background-color: var(--primary-color);
-    color: white;
+  background-color: var(--primary-color);
+  color: white;
 }
 /* Define scrollbar styles */
 /* For Firefox */
 /* width */
 ::-moz-scrollbar {
   width: 10px !important;
-
 }
 
 /* Track */
@@ -65,21 +63,18 @@
   background: var(--primary-color) !important;
   border-radius: 10px !important;
   width: 3px !important; /* Reduced width */
- 
 }
 
 /* For Chrome, Edge, and Safari */
 /* width */
 ::-webkit-scrollbar {
   width: 10px !important;
-
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
   background: transparent !important;
   border-radius: 10px !important;
-  
 }
 
 /* Handle */
@@ -88,7 +83,6 @@
   border-radius: 10px !important;
   width: 5px !important; /* Reduced width */
   border: 4px solid transparent;
- 
 }
 
 /* For IE and Edge */
@@ -109,47 +103,40 @@ body::-ms-scrollbar-thumb {
   background: var(--primary-color) !important;
   border-radius: 10px !important;
   width: 3px !important; /* Reduced width */
-  
 }
 
 @media only screen and (max-width: 1366px) {
-  :root{
+  :root {
     font-size: calc(3px + 1.8vmin);
   }
-  
 }
 
 @media only screen and (max-width: 1024px) {
-  :root{
+  :root {
     font-size: calc(3px + 1.2vmin);
-  }  
+  }
 }
 
 @media only screen and (max-width: 768px) {
-  :root{
+  :root {
     font-size: calc(3px + 1.3vmin);
   }
-  
-  
 }
 
 @media only screen and (max-width: 468px) {
-  :root{
+  :root {
     font-size: calc(3px + 2vmin);
   }
-  
-  
 }
 
 video::-webkit-media-controls {
-    display: none !important;
-    /* Additional CSS reset to ensure it's fully hidden */
-    opacity: 0;
-    width: 0;
-    height: 0;
-    pointer-events: none;
-  
-  }
+  display: none !important;
+  /* Additional CSS reset to ensure it's fully hidden */
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
 video::-webkit-media-controls-start-playback-button {
-    display: none !important;
+  display: none !important;
 }

@@ -1,168 +1,153 @@
-.Main-footer{
-    position: relative;
-    height: 300px;
-    padding: 60px;
-    overflow: hidden;
-    &  video {
-        position: absolute;
-        top: 70%;
-        left: 50%;
-        transform: translate(-50%, -60%);
-        min-width: 100%;
-        min-height: 100%;
-        width: auto;
-        height: auto;
-        object-fit: cover; /* Ensures the video covers the entire container */
-      }
+.Main-footer {
+  position: relative;
+  height: 300px;
+  padding: 60px;
+  overflow: hidden;
+  & video {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover; /* Ensures the video covers the entire container */
+  }
 }
 
-
-.footer-content{
-    display: flex;
-    flex-direction: row;
-    color: white;
-    position: relative;
-    flex-wrap: wrap;
-    height: 100%;
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  position: relative;
+  flex-wrap: wrap;
+  height: 100%;
 }
 
-.footer-left{
-    display: flex;
+.footer-left {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.footer-social-container {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.footer-right {
+  margin-left: auto;
+  gap: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer-menu {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-right a {
+  text-decoration: none;
+}
+
+.footer-right i {
+  text-align: center;
+  font-size: 2.5em;
+  color: white;
+}
+.footer-social-container a:hover .fa-linkedin {
+  color: #0a66c2; /* LinkedIn blue */
+}
+
+.footer-social-container a:hover .fa-facebook {
+  color: #1877f2; /* Facebook blue */
+}
+
+.footer-social-container a:hover .fa-instagram {
+  color: #e4405f; /* Instagram pink */
+}
+
+.footer-menu-item {
+  --footer-menu-color: rgba(255, 255, 255, 0.742);
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+  position: relative;
+}
+
+.footer-menu-item:hover {
+  color: var(--footer-menu-color);
+}
+
+.footer-menu-item::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px; /* Adjust the thickness of the underline */
+  background-color: var(
+    --footer-menu-color
+  ); /* Set your desired underline color */
+  transition: text-shadow 0.4s ease, width 550ms cubic-bezier(0.85, 0, 0, 1); /* Adjust the transition duration and timing function */
+  text-shadow: none;
+}
+
+.footer-menu-item:hover::after {
+  width: 100%;
+}
+
+.conclude-text p {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 1.7em;
+  text-align: center;
+  margin: 0;
+}
+
+.footer-copyright {
+  font-size: 0.7em;
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .Main-footer {
     justify-content: center;
-    gap: 50px;
+    align-items: center;
+    padding: 10px;
     flex-direction: column;
-    flex-wrap: nowrap;
-    
+    height: 400px;
+  }
 
-}
+  .footer-copyright p {
+    text-align: center;
+  }
 
-.footer-social-container{
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
-}
+  .footer-left {
+    align-items: center;
+    width: 100%;
+  }
 
-.footer-right{
-    margin-left: auto;
-    gap: 50px;
-    display: flex;
-    flex-direction: column;
+  .footer-right {
     justify-content: center;
+    align-items: center;
+    padding: 0px;
+    width: 100%;
+  }
+
+  .footer-right i {
+    padding: 20px;
+  }
+
+  .conclude-text {
+    padding: 0px;
+  }
 }
-
-.footer-menu{
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.footer-right a{
-    
-    text-decoration: none;
-}
-
-.footer-right i{
-    text-align: center;
-    font-size: 2.5em;
-    color: white;
-
-}
-.footer-right i:hover{
-    background: radial-gradient(circle at  -10% -15%, var(--secondary-color) 10%, var(--primary-color) 20%, var(--octtoppus-peach) 70%);
-    -webkit-background-clip: text; /* For Safari */
-    -webkit-text-fill-color: transparent; /* For Safari */
-}
-
-.footer-menu-item{
-    --footer-menu-color: rgba(255, 255, 255, 0.742);
-    color: white;
-    text-decoration: none;
-    font-size: 1em;
-    position: relative;
-}
-
-.footer-menu-item:hover{
-    color: var(--footer-menu-color);    
-}
-
-.footer-menu-item::after{
-    content: '';
-      position: absolute;
-      top: 20px;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 2px; /* Adjust the thickness of the underline */
-      background-color: var(--footer-menu-color); /* Set your desired underline color */
-      transition:
-      text-shadow 0.4s ease,
-      width 550ms cubic-bezier(0.85, 0, 0 ,1); /* Adjust the transition duration and timing function */
-      text-shadow: none;
-    }
-    
-    .footer-menu-item:hover::after{
-        
-        width: 100%;
-    
-    }
-    
-  
-
-.conclude-text p{
-    font-family: 'League Spartan', sans-serif;
-    font-size: 1.7em;
-    text-align: center;
-    margin: 0;
-}
-
-
-
-.footer-copyright{
-    font-size: 0.7em;
-    text-align: center;
-}
-
-@media only screen and (max-width: 768px){
-
-  
-    .Main-footer{
-        justify-content: center;
-        align-items: center;
-        padding: 10px;
-        flex-direction: column;
-        height: 400px;
-        
-    
-    }
-
-    .footer-copyright p{
-        text-align: center;
-    }
-
-    .footer-left{
-       
-      align-items: center;
-      width: 100%;
-    }
-
-    .footer-right{
-        justify-content: center;
-        align-items: center;
-        padding: 0px;
-        width: 100%;
-
-    }
-
-    .footer-right i{
-       
-        padding: 20px;
-    
-    
-    }
-
-    .conclude-text{
-    
-        padding: 0px;
-    }
-
-}
+/* Ensures the entire page uses full height */
